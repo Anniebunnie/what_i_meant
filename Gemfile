@@ -9,6 +9,9 @@ gem 'pg'
 gem 'json'
 gem 'httparty'
 
+gem 'musix_match'
+gem 'devise'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,6 +26,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'rspec-rails'
+gem 'capybara'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

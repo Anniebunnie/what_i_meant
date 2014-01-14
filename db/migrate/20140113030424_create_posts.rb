@@ -1,12 +1,18 @@
 class CreatePosts < ActiveRecord::Migration
-  def change
+  def up
     create_table :posts do |t|
       t.string :said
       t.string :meant
-      t.string :song
-      t.string :artist
+      t.integer :song_id
+      t.integer :user_id
+      t.integer :mood_id
+      t.integer :comment_id
 
       t.timestamps
     end
+  end
+
+  def down
+  	drop_table :posts
   end
 end
