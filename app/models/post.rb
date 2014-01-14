@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :said, :meant, :song_id, :user_id, :mood_id
+  attr_accessible :said, :meant, :song_id, :user_id, :mood_id, :song, :mood
 
   belongs_to :mood
   belongs_to :song
@@ -7,8 +7,8 @@ class Post < ActiveRecord::Base
   has_many :commenters, through: :comments, source: :user
   has_many :comments
 
-def join_comment(comment)
-	self.comments << comment
+def submit_mood(mood, song)
+ 	self.moods << Post.create!(mood: mood, song: song)
 end
 
 def join_songs(song)

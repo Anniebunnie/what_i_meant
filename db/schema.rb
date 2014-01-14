@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114010842) do
+ActiveRecord::Schema.define(:version => 20140114201628) do
 
   create_table "comments", :force => true do |t|
     t.string   "comment"
@@ -21,26 +21,33 @@ ActiveRecord::Schema.define(:version => 20140114010842) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "moods", :force => true do |t|
+    t.string   "type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "posts", :force => true do |t|
     t.string   "said"
     t.string   "meant"
     t.integer  "song_id"
-    t.string   "artist_id"
+    t.integer  "user_id"
+    t.integer  "mood_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "user_id"
   end
 
   create_table "songs", :force => true do |t|
     t.string   "title"
     t.string   "artist"
+    t.string   "lyric"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "lyric"
   end
 
   create_table "users", :force => true do |t|
     t.string   "name"
+    t.string   "photo_url"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "email",                  :default => "", :null => false
@@ -53,7 +60,6 @@ ActiveRecord::Schema.define(:version => 20140114010842) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "post_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

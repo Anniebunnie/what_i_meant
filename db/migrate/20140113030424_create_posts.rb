@@ -6,7 +6,6 @@ class CreatePosts < ActiveRecord::Migration
       t.integer :song_id
       t.integer :user_id
       t.integer :mood_id
-      t.integer :comment_id
 
       t.timestamps
     end

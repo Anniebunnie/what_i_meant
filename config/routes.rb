@@ -3,6 +3,12 @@ WhatimeantApp::Application.routes.draw do
 
   resources :users, :except => [:create, :new]
 
+  resources :posts
+
+  resources :songs
+
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
