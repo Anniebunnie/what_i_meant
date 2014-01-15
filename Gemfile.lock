@@ -73,9 +73,6 @@ GEM
     mini_portile (0.5.2)
     multi_json (1.8.4)
     multi_xml (0.5.5)
-    musix_match (0.2.0)
-      httparty (>= 0.6.1)
-      json
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
@@ -159,7 +156,6 @@ DEPENDENCIES
   httparty
   jquery-rails
   json
-  musix_match
   pg
   pry
   rails (= 3.2.13)

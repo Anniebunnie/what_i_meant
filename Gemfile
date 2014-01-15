@@ -9,7 +9,6 @@ gem 'pg'
 gem 'json'
 gem 'httparty'
 
-gem 'musix_match'
 gem 'devise'
 
 gem 'pry'
