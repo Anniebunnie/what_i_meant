@@ -1,11 +1,10 @@
 WhatimeantApp::Application.routes.draw do
   devise_for :users
 
-  resources :users, :except => [:create, :new]
-
   resources :posts
-
   resources :songs
+
+  root :to => 'home#index'
 
 
 

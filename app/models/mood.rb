@@ -3,9 +3,9 @@ class Mood < ActiveRecord::Base
 
   has_many :posts
 
-  def girly
- 
- 	
+  def type
+  	array_of_emotions =
+  	%w[happy, emo, aggressive, upbeat, relaxed, upbeat, excited]
   end
  
 
