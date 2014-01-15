@@ -3,8 +3,11 @@ class Mood < ActiveRecord::Base
 
   has_many :posts
 
-  def submit_mood(mood)
- 	self.posts << Post.create!(mood: mood)
+  def girly
+ 
+ 	
   end
  
+
+
 end

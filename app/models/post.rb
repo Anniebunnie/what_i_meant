@@ -7,12 +7,10 @@ class Post < ActiveRecord::Base
   has_many :commenters, through: :comments, source: :user
   has_many :comments
 
-def submit_mood(mood, song)
- 	self.moods << Post.create!(mood: mood, song: song)
-end
 
-def join_songs(song)
-	self.songs << song
+def user_comments(commenter, comment)
+	self.comments << comment
+	comment.user = commenter
 end
 
 end

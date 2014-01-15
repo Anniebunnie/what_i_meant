@@ -12,7 +12,7 @@ gem 'httparty'
 gem 'musix_match'
 gem 'devise'
 
-
+gem 'pry'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
